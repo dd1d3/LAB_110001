@@ -1,4 +1,4 @@
-![alt text](banner.png)
+![alt text](../screenshots/banner.png)
 # Analysis — 489.exe (RAT - Remote Access Trojan)
 **Date:** 2026-03-28  
 **Analyst:** dd1d3
@@ -58,9 +58,9 @@ After extracting with **pyinstxtractor**, the inner binary `contentIndex.exe` sh
 
 So the structure is: `489.exe` 
 
-![alt text](preview.png)
+![alt text](../screenshots/preview.png)
 
-![alt text](preview3.png)
+![alt text](../screenshots/preview3.png)
 ---
 
 ## Stage 2 — Extraction with pyinstxtractor
@@ -79,8 +79,8 @@ The extracted directory also contained `contentIndex.exe` (61 MB) — the actual
 
 > Warning during extraction: version mismatch between Python 3.14 (my machine) and Python 3.10 (build environment). This caused `.pyz` extraction to be skipped, but the core binary was still accessible.
 
-![alt text](preview1.png)
-![alt text](preview2.png)
+![alt text](../screenshots/preview1.png)
+![alt text](../screenshots/preview2.png)
 ---
 
 ## Stage 3 — Persistence Mechanism
@@ -100,7 +100,7 @@ Red flags:
 
 This is a classic persistence technique: copy the payload to a disguised location under AppData and name it to blend in with Windows services.
 
-![alt text](preview8.png)
+![alt text](../screenshots/preview8.png)
 
 ---
 
@@ -139,9 +139,9 @@ if (6 < *puVar3) {
 
 This checks for CPU extended features likely used for environment detection or crypto operations (AVX2 support check is common in modern malware for performance-oriented AES).   
 
-![alt text](preview5.png)
-![alt text](preview6.png)
-![alt text](preview7.png)
+![alt text](../screenshots/preview5.png)
+![alt text](../screenshots/preview6.png)
+![alt text](../screenshots/preview7.png)
 ---
 
 ## Stage 5 — Network Analysis with FakeNet-NG
@@ -157,7 +157,7 @@ SysSettingSvc.exe (2880) → TCP 127.0.0.1:49706
 
 The malware repeatedly queries `api.telegram.org` — this is the C2 channel. Telegram Bot API over HTTPS port 443 is a common technique to blend C2 traffic with legitimate traffic since Telegram is rarely blocked at the network level.
 
-![alt text](preview10.png)
+![alt text](../screenshots/preview10.png)
 ---
 
 ## Stage 6 — x64dbg Live API call
@@ -171,7 +171,7 @@ rsi: L"443"
 ```
 
 This directly confirms the outbound C2 connection to Telegram's API server on port 443, consistent with FakeNet-NG output.
-![alt text](preview14.png)
+![alt text](../screenshots/preview14.png)
 ---
 
 ## Stage 7 — Onefile temp folder contents (author's mistake)
@@ -186,9 +186,9 @@ Contents included `bot_script.dll` — the actual bot logic — along with Pytho
 
 The presence of `bot_script.dll` is significant it means the bot logic was compiled separately and loaded dynamically.
 
-![alt text](preview12.png)
-![alt text](preview11.png)
-![alt text](preview14-1.png)
+![alt text](../screenshots/preview12.png)
+![alt text](../screenshots/preview11.png)
+![alt text](../screenshots/preview14-1.png)
 ---
 
 ## Stage 8 — translations.json (author identity leak)
@@ -204,7 +204,7 @@ Inside the temp folder, a `translations.json` file was found. It contained bilin
 
 The author **embedded their own Telegram handle** (`@batpere`) in the translation strings as a project credit. This is a direct attribution artifact — the author advertised the RAT's original Telegram channel inside the binary itself.
 
-![alt text](preview13-1.png)
+![alt text](../screenshots/preview13-1.png)
 ---
 
 ## Stage 9 — bot_script.dll string analysis (Ghidra)
@@ -227,7 +227,7 @@ Key takeaways:
 - Targets **Telegram Desktop** — likely for session stealing or screenshot capture 
 - Contains full Telegram Bot API endpoint template: `https://api.telegram.org/bot{token}/test/{method}`
 
-![alt text](preview15.png)
+![alt text](../screenshots/preview15.png)
 ---
 
 ## Summary
@@ -276,22 +276,22 @@ Temp path pattern:   %TEMP%\onefile_*
 
 All screenshots used in this analysis are located in the `screenshots/` directory:
 
-- `screenshots/banner.png`
-- `screenshots/preview.png`
-- `screenshots/preview1.png`
-- `screenshots/preview2.png`
-- `screenshots/preview3.png`
-- `screenshots/preview5.png`
-- `screenshots/preview6.png`
-- `screenshots/preview7.png`
-- `screenshots/preview8.png`
-- `screenshots/preview10.png`
-- `screenshots/preview11.png`
-- `screenshots/preview12.png`
-- `screenshots/preview13-1.png`
-- `screenshots/preview14.png`
-- `screenshots/preview14-1.png`
-- `screenshots/preview15.png`
+- [`banner.png`](../screenshots/banner.png)
+- [`preview.png`](../screenshots/preview.png)
+- [`preview1.png`](../screenshots/preview1.png)
+- [`preview2.png`](../screenshots/preview2.png)
+- [`preview3.png`](../screenshots/preview3.png)
+- [`preview5.png`](../screenshots/preview5.png)
+- [`preview6.png`](../screenshots/preview6.png)
+- [`preview7.png`](../screenshots/preview7.png)
+- [`preview8.png`](../screenshots/preview8.png)
+- [`preview10.png`](../screenshots/preview10.png)
+- [`preview11.png`](../screenshots/preview11.png)
+- [`preview12.png`](../screenshots/preview12.png)
+- [`preview13-1.png`](../screenshots/preview13-1.png)
+- [`preview14.png`](../screenshots/preview14.png)
+- [`preview14-1.png`](../screenshots/preview14-1.png)
+- [`preview15.png`](../screenshots/preview15.png)
 
 ---
 
