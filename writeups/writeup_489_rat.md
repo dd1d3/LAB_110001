@@ -272,4 +272,27 @@ Temp path pattern:   %TEMP%\onefile_*
 
 ---
 
+## Screenshots
+
+All screenshots used in this analysis are located in the `screenshots/` directory:
+
+- `screenshots/banner.png`
+- `screenshots/preview.png`
+- `screenshots/preview1.png`
+- `screenshots/preview2.png`
+- `screenshots/preview3.png`
+- `screenshots/preview5.png`
+- `screenshots/preview6.png`
+- `screenshots/preview7.png`
+- `screenshots/preview8.png`
+- `screenshots/preview10.png`
+- `screenshots/preview11.png`
+- `screenshots/preview12.png`
+- `screenshots/preview13-1.png`
+- `screenshots/preview14.png`
+- `screenshots/preview14-1.png`
+- `screenshots/preview15.png`
+
+---
+
 *First writeup — feedback welcome. Analysis conducted in isolated VM.*
