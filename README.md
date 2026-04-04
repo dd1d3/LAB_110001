@@ -47,7 +47,7 @@ LAB_110001/
 ├── writeups/           # Full walkthroughs readable format, one file per sample
 ├── tools/              # Helper scripts, IDA/Ghidra plugins, YARA rules
 ├── screenshots/        # Debugger and disassembler captures
-└── sandbox/            # VM configs — FlareVM, REMnux, Cuckoo
+└── sandbox/            # VM configs — FlareVM, REMnux
 ```
 
 ---
@@ -60,7 +60,7 @@ LAB_110001/
 | Static | Disassembly, string extraction, import analysis | IDA Free, Ghidra, DnSpy |
 | Dynamic | Execution in sandbox, behavioral capture | x64dbg, ProcMon |
 | Network | C2 traffic, DNS, protocol identification | FakeNet-NG, Wireshark |
-| Detection | Writing YARA rules, extracting IOCs | YARA, ClamAV |
+| Detection | Writing YARA rules, extracting IOCs | YARA |
 
 ---
 
