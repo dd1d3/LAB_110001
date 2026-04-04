@@ -48,7 +48,7 @@ Loaded `489.exe` into **Detect It Easy (DIE)**. Key findings:
 - **Heuristic packer: Compressed or packed data [Strange overlay]** — suspicious overlay section
 - **Overlay:** Raw Deflate stream + ZLIB compression
 
-This told me the outer shell is PyInstaller but something inside is further packed  a double-layer approach.
+This told me the outer shell is PyInstaller but something inside is further packed a double-layer approach.
 
 After extracting with **pyinstxtractor**, the inner binary `contentIndex.exe` showed:
 
@@ -202,7 +202,7 @@ Inside the temp folder, a `translations.json` file was found. It contained bilin
 }
 ```
 
-The author **embedded their own Telegram handle** (`@batpere`) in the translation strings as a project credit. This is a direct attribution artifact — the author advertised the RAT's original Telegram channel inside the binary itself.
+The author **embedded their own Telegram handle** (`@batpere`) in the translation strings as a project credit. This is a direct attribution artifact the author advertised the RAT's original Telegram channel inside the binary itself.
 
 ![alt text](../screenshots/preview13-1.png)
 ---
