@@ -59,7 +59,7 @@ LAB_110001/
 | Triage | File type, hashes, entropy, packer detection | DIE, PE-Bear, ExifTool |
 | Static | Disassembly, string extraction, import analysis | IDA Free, Ghidra, DnSpy |
 | Dynamic | Execution in sandbox, behavioral capture | x64dbg, ProcMon |
-| Network | C2 traffic, DNS, protocol identification | FakeNet-NG, Zeek, Wireshark |
+| Network | C2 traffic, DNS, protocol identification | FakeNet-NG, Wireshark |
 | Detection | Writing YARA rules, extracting IOCs | YARA, ClamAV |
 
 ---
