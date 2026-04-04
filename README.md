@@ -34,7 +34,7 @@ LAB_110001 is where I document my work breaking down malware how it's built, how
 
 ```
 LAB_110001/
-├── samples/            # Malware samples — password-protected archives (pw: infected)
+├── samples/            # Malware samples — password protected archives (pw: infected)
 │   ├── ransomware/
 │   ├── trojans/
 │   ├── rats/
