@@ -78,7 +78,7 @@ Recommended analysis environments:
 
 - **[FlareVM](https://github.com/mandiant/flare-vm)** — Windows RE environment (IDA, Ghidra, x64dbg pre-installed)
 - **[REMnux](https://remnux.org/)** — Linux distro built for malware analysis
-- **[Cuckoo Sandbox](https://cuckoosandbox.org/)** — automated dynamic analysis
+
 
 ---
 
