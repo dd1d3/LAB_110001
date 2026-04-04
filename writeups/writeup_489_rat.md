@@ -274,4 +274,4 @@ Temp path pattern:   %TEMP%\onefile_*
 
 ---
 
-*First writeup — feedback welcome. Analysis conducted in isolated VM.*
+*First writeup — feedback welcome.*
