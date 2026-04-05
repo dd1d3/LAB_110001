@@ -5,8 +5,6 @@
 
 **Analyst:** dd1d3
 
-**Skill level:** beginner
-
 **Source:** kubcheats.pro
 
 **Classification:** Multi-stage loader → Vidar Stealer
