@@ -1,4 +1,4 @@
-![alt text](screenshots/banner.png)
+![alt text](../screenshots/banner.png)
 # Analysis — KubCheats Loader (Stealer) also (Vidar)
 
 **Date:** 2026-04-05  
@@ -25,7 +25,7 @@ A fake cheat distribution site (`kubcheats.pro`) serving what appears to be game
 
 The loader uses four layers of obfuscation and misdirection before the final payload executes.
 
-![alt text](screenshots/a.png)
+![alt text](../screenshots/a.png)
 
 ---
 
@@ -63,7 +63,7 @@ loader.exe  (C++ outer shell, Strange overlay)
 
 The outer binary looks like a legitimate C++ application. The Strange overlay flag indicated something hidden inside confirmed by the embedded PE resource.
 
-![alt text](screenshots/avz.png)
+![alt text](../screenshots/avz.png)
 ---
 
 ## Stage 2 — Discovering the .NET Layer
@@ -88,11 +88,11 @@ Seeing `.NET` strings inside a C++ binary is a strong indicator the loader is bo
 
 Filtered strings for `.NET` in Ghidra confirmed: `DOTNET_IPC_V1`, `.NET Runtime`, `.NET Server GC`, `.NET Debugger` full CLR infrastructure embedded.
 
-![alt text](screenshots/acazc.png)
+![alt text](../screenshots/acazc.png)
 
-![alt text](screenshots/axzzcz1.png)
+![alt text](../screenshots/axzzcz1.png)
 
-![alt text](screenshots/czcza12.png)
+![alt text](../screenshots/czcza12.png)
 ---
 
 ## Stage 3 — ExtremeDumper: Extracting the Hidden Assembly
@@ -109,9 +109,9 @@ Extracted: **`WindowsFormsApp1.exe`**
 
 Dump directory contained full .NET Core runtime DLLs alongside the extracted executable confirming the loader bundles its own runtime.
 
-![alt text](screenshots/czzczx31.png)
+![alt text](../screenshots/czzczx31.png)
 
-![alt text](screenshots/cxzcx33-1.png)
+![alt text](../screenshots/cxzcx33-1.png)
 ---
 
 ## Stage 4 — dnSpy Analysis: WindowsFormsApp1.exe
@@ -127,7 +127,7 @@ private string archivePassword = "abc3728";
 
 No obfuscation on the dropper itself the archive password is stored as a plaintext field.
 
-![alt text](screenshots/pass31311.png)
+![alt text](../screenshots/pass31311.png)
 
 ### chiken.dll is a disguised ZIP
 
@@ -149,9 +149,9 @@ Process.Start(new ProcessStartInfo(text3)
 
 `chiken.dll` is not a DLL it is a ZIP archive. The dropper extracts it using the hardcoded password, retrieves `conhost.exe` from inside, then launches it with **elevated privileges** (`runas`).
 
-![alt text](screenshots/zcaaap.png)
+![alt text](../screenshots/zcaaap.png)
 
-![alt text](screenshots/zczczc3.png)
+![alt text](../screenshots/zczczc3.png)
 ### Persistence path
 
 ```csharp
@@ -169,7 +169,7 @@ private void InitializePaths()
 }
 ```
 
-![alt text](screenshots/chickenlol.png)
+![alt text](../screenshots/chickenlol.png)
 
 ---
 
@@ -200,15 +200,15 @@ Windows Defender also detected threats on execution:
 - `Trojan:Win32/Vidar.MCQ!MTB` — **Critical**
 - `SettingsModifier:Win32/PossibleHostsFileHijack` — **Medium**
 
-![alt text](screenshots/githubaccout.png)
+![alt text](../screenshots/githubaccout.png)
 
-![alt text](screenshots/defenderprotectme.png)
+![alt text](../screenshots/defenderprotectme.png)
 
-![alt text](screenshots/defenderprotectme2.png)
+![alt text](../screenshots/defenderprotectme2.png)
 
-![alt text](screenshots/stringnotobuscfate.png)
+![alt text](../screenshots/stringnotobuscfate.png)
 
-![alt text](screenshots/useragent.png)
+![alt text](../screenshots/useragent.png)
 
 
 ---
@@ -246,13 +246,13 @@ The obfuscator used here is not in de4dot's signature database custom or heavily
 
 Windows Defender's detection of `Trojan:Win32/Vidar.MCQ!MTB` confirms this is a known Vidar variant.
 
-![alt text](screenshots/dieconhost.png)
+![alt text](../screenshots/dieconhost.png)
 
-![alt text](screenshots/defenderprotectme2-1.png)
+![alt text](../screenshots/defenderprotectme2-1.png)
 
-![alt text](screenshots/notobusfacteconhost.png)
+![alt text](../screenshots/notobusfacteconhost.png)
 
-![alt text](screenshots/conhoststealer.png)
+![alt text](../screenshots/conhoststealer.png)
 ---
 
 ## Stage 7 — randll32.exe (Go C2 Implant)
