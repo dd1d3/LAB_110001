@@ -1,9 +1,14 @@
 ![alt text](../screenshots/banner.png)
 # Analysis — 489.exe (RAT - Remote Access Trojan)
+
 **Date:** 2026-03-28  
+
 **Analyst:** dd1d3
+
 **Skill level:** beginner
+
 **Sample:** `489.exe`  
+
 **Classification:** Telegram-based RAT (Remote Access Trojan)
 
 ---
