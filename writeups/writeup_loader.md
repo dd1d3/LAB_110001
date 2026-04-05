@@ -271,11 +271,11 @@ Unpacked size: ~11 MiB
 
 Go binaries are notoriously difficult to reverse the standard library is statically linked and symbol names are often stripped. Analysis passed to Any.run for dynamic results.
 
-![alt text](randll32.png)
+![alt text](../screenshots/randll32.png)
 
-![alt text](ultimatepackerextract.png)
+![alt text](../screenshots/ultimatepackerextract.png)
 
-![alt text](randll32after.png)
+![alt text](../screenshots/randll32after.png)
 ---
 
 ## Stage 8 — Any.run Sandbox Results
@@ -308,13 +308,13 @@ Two distinct C2 servers:
 - `136.234.255.75:64737` — XSERVERCLOUD (probably)
 - `195.58.62.98:63724` — ITHOSTLINE (probably)
 
-![alt text](adadadadadadadadadad.png)
+![alt text](../screenshots/adadadadadadadadadad.png)
 
-![alt text](adaaaaaaaaaaaaaac.png)
+![alt text](../screenshots/adaaaaaaaaaaaaaac.png)
 
-![alt text](BADSERVERS.png)
+![alt text](../screenshots/BADSERVERS.png)
 
-![alt text](C2SERVERPROB.png)
+![alt text](../screenshots/C2SERVERPROB.png)
 ---
 
 ## IOCs
