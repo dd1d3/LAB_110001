@@ -2,9 +2,13 @@
 # Analysis — Loader by Sexsoldier (RAT/Stealer)
 
 **Date:** 2026-04-10  
+
 **Analyst:** dd1d3  
+
 **Source:** Google Drive link — `Loader .rar` (password: `123123`)  
+
 **AV Detection:** `Trojan:Win32/Ravartar!rfn` (Windows Defender)  
+
 **Classification:** Multi-stage dropper → Go-based RAT/Stealer 
 
 ---
