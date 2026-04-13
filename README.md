@@ -15,7 +15,7 @@
 
 ## About
 
-LAB_110001 is where I document my work breaking down malware how it's built, how it runs, and how to detect it. Each entry covers a real sample with a full walkthrough: from initial triage to disassembly, behavioral analysis, and IOC extraction.
+LAB_110001 is where I document my work breaking down malware how it's built, how it runs, and how to detect it. Each entry covers a real sample with a full walkthrough: from initial triage to disassembly, behavioral analysis
 
 ---
 
