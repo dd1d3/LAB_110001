@@ -388,9 +388,7 @@ The malware queries the **TON blockchain** (Telegram's cryptocurrency network) u
 Archive password:     123123
 Dropper name:         Loader by Sexsoldier.exe
 AV detection:         Trojan:Win32/Ravartar!rfn
-Persistence path:     %AppData%\SystemData\svchost.exe
 Registry key:         HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\SystemAutoLauncher
-Tracking file:        %TEMP%\autolauncher_tracking.txt
 Extraction dir:       %AppData%\Local\MergedApps_{GUID}\
 C2 mechanism:         TON blockchain DNS (ton.access.orbs.network)  (probably)
 Delay:                60 minutes (anti-sandbox)
