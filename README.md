@@ -57,9 +57,9 @@ LAB_110001/
 | Stage | What happens | Tools used |
 |-------|-------------|------------|
 | Triage | File type, hashes, entropy, packer detection | DIE, PE-Bear, ExifTool |
-| Static | Disassembly, string extraction, import analysis | IDA Free, Ghidra, DnSpy |
+| Static | Disassembly, string extraction, import analysis | IDA, Ghidra, DnSpy |
 | Dynamic | Execution in sandbox, behavioral capture | x64dbg, ProcMon |
-| Network | C2 traffic, DNS, protocol identification | FakeNet-NG, Wireshark |
+| Network | C2 traffic, DNS, protocol identification | FakeNet-NG |
 | Detection | Writing YARA rules, extracting IOCs | YARA |
 
 ---
@@ -78,7 +78,7 @@ Recommended analysis environments:
 - [MalwareBazaar](https://bazaar.abuse.ch/) — public sample database
 - [Any.run](https://any.run/) — interactive sandbox
 - [Hybrid Analysis](https://www.hybrid-analysis.com/) — free automated sandbox
-- [VirusTotal](https://www.virustotal.com/)
+- [VirusTotal](https://www.virustotal.com/) — online sandbox
 
 ---
 
