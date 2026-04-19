@@ -478,3 +478,34 @@ This payload is being distributed through multiple unrelated droppers by differe
 confirming a MaaS model. The TON wallet address is the most stable attribution indicator
 across all observed samples it has remained constant across at least three confirmed dropper chains.
 
+**External attribution**
+Elastic Security independently identified this payload family
+as `Windows.Trojan.SalatStealer` (rule ID: 03d2a4ee), 
+published 2026-02-11 consistent with findings in this analysis.
+
+## YARA Rule
+
+```yara
+rule Windows_Trojan_SalatStealer_03d2a4ee {
+    meta:
+        author          = "Elastic Security"
+        id              = "03d2a4ee-8197-454b-9126-be17f55d25f0"
+        creation_date   = "2026-02-11"
+        last_modified   = "2026-03-17"
+        threat_name     = "Windows.Trojan.SalatStealer"
+        severity        = 100
+        arch_context    = "x86"
+        scan_context    = "file, memory"
+        os              = "windows"
+
+    strings:
+        $a1 = "main.getGeckoCookies" ascii fullword
+        $a2 = "main.getChromeAutofils" ascii fullword
+        $a3 = "main.runKeylogger" ascii fullword
+        $a4 = "salat/task.go" ascii fullword
+        $a5 = "salat/screenshot.CaptureRect" ascii fullword
+
+    condition:
+        all of them
+}
+```
