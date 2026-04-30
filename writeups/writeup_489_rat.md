@@ -5,8 +5,6 @@
 
 **Analyst:** dd1d3
 
-**Skill level:** beginner
-
 **Sample:** `489.exe`  
 
 **Classification:** Telegram-based RAT (Remote Access Trojan)
