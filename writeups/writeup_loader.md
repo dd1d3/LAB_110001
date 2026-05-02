@@ -1,5 +1,5 @@
 ![alt text](../screenshots/banner.png)
-# Analysis — Loader (Stealer) also known as (Vidar)
+# Analysis — Loader (Stealer) 
 
 **Date:** 2026-04-05  
 
