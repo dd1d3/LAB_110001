@@ -7,7 +7,7 @@
 
 **Source:** kubcheats.pro
 
-**Classification:** Multi-stage loader → Vidar Stealer
+**Classification:** Multi-stage loader → Stealer
 
 ---
 
