@@ -19,7 +19,7 @@ Analysis conducted in isolated VM environment. All samples handled in sandboxed 
 
 ## Overview
 
-A fake cheat distribution site (`kubcheats.pro`) serving what appears to be game cheats for games. The downloaded archive contains a multi-stage loader that drops **Vidar**.
+A fake cheat distribution site (`kubcheats.pro`) serving what appears to be game cheats for games. The downloaded archive contains a multi-stage loader that drops **Stealer**.
 
 The loader uses four layers of obfuscation and misdirection before the final payload executes.
 
