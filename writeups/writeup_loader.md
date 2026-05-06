@@ -68,11 +68,6 @@ The outer binary looks like a legitimate C++ application. The Strange overlay fl
 
 In the debugger, two anomalies appeared:
 
-**OneDrive reference:**
-```
-L"C:\Program Files\Microsoft OneDrive\26.040.0301.0001\FileSyncShell64.dll"
-```
-No obvious relevance likely a decoy or side effect of the loader's environment checks.
 
 **More critically — .NET runtime strings appeared in the debugger:**
 ```
@@ -88,7 +83,6 @@ Filtered strings for `.NET` in Ghidra confirmed: `DOTNET_IPC_V1`, `.NET Runtime`
 
 ![alt text](../screenshots/acazc.png)
 
-![alt text](../screenshots/axzzcz1.png)
 
 ![alt text](../screenshots/czcza12.png)
 ---
