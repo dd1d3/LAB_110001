@@ -182,7 +182,7 @@ The domain was registered 4 days before the sample was uploaded to the distribut
 |---------|--------------------------------------------|
 | Domain  | silent-orbit.cc                            |
 | Domain  | api.ipify.org (used for IP enumeration)    |
-| URL     | https://orbit.cc/lander                    |
+| URL     | https://silent-orbit.cc                    |
 | File    | SpectraCheat.exe (114,520 KB)              |
 | Archive | SpectraCheat.zip (186.50 MB)               |
 | Source  | getballoonfiles.com                        |
