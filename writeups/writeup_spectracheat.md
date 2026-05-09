@@ -185,7 +185,6 @@ The domain was registered 4 days before the sample was uploaded to the distribut
 | URL     | https://silent-orbit.cc                    |
 | File    | SpectraCheat.exe (114,520 KB)              |
 | Archive | SpectraCheat.zip (186.50 MB)               |
-| Source  | getballoonfiles.com                        |
 | Port    | TCP/443 (C2 communication)                 |
 | Hash    | SHA256: 3facab9dcf85e97c76ec418c5a6bb89e73225f45b5ba238c2439b21f34c661e6 (PE header region) |
 
