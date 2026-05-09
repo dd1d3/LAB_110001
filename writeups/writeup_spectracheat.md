@@ -69,7 +69,7 @@ The PE viewer shows 12 sections with notably large sizes. Section names include 
 
 The symbol tree shows the following DLLs imported: ADVAPI32, BCRYPT, CRYPT32, DBGHELP, IPHLPAPI, KERNEL32, NTDLL, OLE32, SHELL32, USER32, USERENV, WINMM, WS2\_32, WSOCK32. The combination of CRYPT32, BCRYPT, and the full WSOCK32 socket set indicates network communication with encryption capability.
 
-![alt text](importstablespectra.png)
+![alt text](../screenshots/importstablespectra.png)
 
 ---
 
