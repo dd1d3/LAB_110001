@@ -21,7 +21,7 @@ Analysis conducted in an isolated VM environment. All samples handled in sandbox
 
 Found a site called `softload.org` that presents itself as a clean app distribution platform advertises cracked software like Adobe products, FL Studio, and so on. Downloaded one of the installers (`Setup.exe`). Turns out the binary is a Go-based loader that unpacks two modules directly into memory, never touching disk. The inner payload does sandbox checks, then reaches out to a Telegram channel and a Steam profile both used as redirectors to resolve the actual C2 address by parsing a specific string pattern from their public content
 
-![alt text](softload.png)
+![alt text](../screenshots/softload.png)
 
 ---
 
@@ -56,11 +56,11 @@ DIE results:
 - Overlay at offset `0x00281e00`, size `0x08a0`
 - Sign tool: Windows Authenticode (2.0) [PKCS #7]
 
-![alt text](diedetectitLOLZZa.png)
+![alt text](../screenshots/diedetectitLOLZZa.png)
 
 VirusTotal: **24/71**
 
-![alt text](VRisutotalDF.png)
+![alt text](../screenshots/VRisutotalDF.png)
 
 ---
 
@@ -94,9 +94,9 @@ main.uicreeu.func19
 
 Same package prefix across all exported closures/goroutines, numbered sequentially. Standard Go name obfuscation to prevent static analysis from yielding anything readable
 
-![alt text](buildinfoGOlolz.png)
+![alt text](../screenshots/buildinfoGOlolz.png)
 
-![alt text](secondGOlandInfo.png)
+![alt text](../screenshots/secondGOlandInfo.png)
 ---
 
 ## Stage 3 — Dynamic Analysis: FakeNet
@@ -127,9 +127,9 @@ build_id: adadc61fcb978d97d9102581b7478bef
 
 Both endpoints receive the same multipart body with two fields: hardware ID and build ID. At this point it's not clear why it hits both that becomes obvious later
 
-![alt text](fakenetsoftloadfirst.png)
+![alt text](../screenshots/fakenetsoftloadfirst.png)
 
-![alt text](fakenetsteamcommunityparsersecond.png)
+![alt text](../screenshots/fakenetsteamcommunityparsersecond.png)
 
 ---
 
@@ -147,9 +147,9 @@ Setup_exe_PID1734_Setup.exe_7FF60B2B0000_x64.exe   2,884 KB
 - Second file (`C0000000`) bytes are broken after dump, nothing readable, obfuscated. Dead end
 - First file (`5C0000000`) this is where everything happens
 
-![alt text](dumpeverythingsoftload.png)
+![alt text](../screenshots/dumpeverythingsoftload.png)
 
-![alt text](eadaxzxcfsfd4ea.png)
+![alt text](../screenshots/eadaxzxcfsfd4ea.png)
 ---
 
 ## Stage 5 — hiddenmodule_5C0000000: Triage
@@ -160,7 +160,7 @@ DIE on the dumped module:
 
 So the inner payload is not Go. Go is used only as the outer loader/unpacker. The actual payload is compiled ASMx64
 
-![alt text](zcxeferet234ada.png)
+![alt text](../screenshots/zcxeferet234ada.png)
 
 ---
 
@@ -228,15 +228,15 @@ WinHTTP imports present: `WinHttpOpen`, `WinHttpConnect`, `WinHttpOpenRequest`, 
 
 `C2 unavailable` string confirms there's a retry loop with fallback logic
 
-![alt text](adsaddsasq3e131FIRST.png)
+![alt text](../screenshots/adsaddsasq3e131FIRST.png)
 
-![alt text](dad323245234DSECOBD.png)
+![alt text](../screenshots/dad323245234DSECOBD.png)
 
-![alt text](DAASZCX3223dadL.png)
+![alt text](../screenshots/DAASZCX3223dadL.png)
 
-![alt text](ADADZCXCeweklla3223.png)
+![alt text](../screenshots/ADADZCXCeweklla3223.png)
 
-![alt text](XAXSsa323.png)
+![alt text](../screenshots/XAXSsa323.png)
 ---
 
 ## Stage 7 — Ghidra:
@@ -252,11 +252,11 @@ In the binary listing:
 
 The parser looks for `g3rm1n` in the retrieved content, then extracts everything between that string and the pipe character `|`. That substring is the actual C2 domain. Both Telegram and Steam serve as redundant sources for the same value if one is down, the other provides the address
 
-![alt text](ADSCZXE44E3534CAads.png)
+![alt text](../screenshots/ADSCZXE44E3534CAads.png)
 
-![alt text](adads3232dasc.png)
+![alt text](../screenshots/adads3232dasc.png)
 
-![alt text](adppadpad23103cz.png)
+![alt text](../screenshots/adppadpad23103cz.png)
 
 
 ---
@@ -284,11 +284,11 @@ NS:       Cloudflare
 
 Already reported on abuse.ch as malicious infrastructure by researcher `crep1x`, tagged as a stealer C2 (2026-05-15 16:00 UTC)
 
-![alt text](ffsfsdfsfsfdsfd1211.png)
+![alt text](../screenshots/ffsfsdfsfsfdsfd1211.png)
 
-![alt text](dadadda31101301301300azc.png)
+![alt text](../screenshots/dadadda31101301301300azc.png)
 
-![alt text](adaddzc33223117.png)
+![alt text](../screenshots/adaddzc33223117.png)
 ---
 
 ## Stage 9 — Steam Profile: 76561198706525776
@@ -332,13 +332,13 @@ State:       Tyne and Wear, GB
 
 Updated the same day as this analysis. Also reported on abuse.ch by `crep1x` as stealer C2 (`pgo.fatherchrismas.com`)
 
-![alt text](adzxccz4243166prof.png)
+![alt text](../screenshots/adzxccz4243166prof.png)
 
-![alt text](addzxc23423542459329dld.png)
+![alt text](../screenshots/addzxc23423542459329dld.png)
 
-![alt text](adadzc32234242991sdaas.png)
+![alt text](../screenshots/adadzc32234242991sdaas.png)
 
-![alt text](adcz3133333330010PDOO.png)
+![alt text](../screenshots/adcz3133333330010PDOO.png)
 
 ---
 
