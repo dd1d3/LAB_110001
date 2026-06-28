@@ -47,7 +47,6 @@ LAB_110001/
 ├── writeups/           # Full walkthroughs readable format, one file per sample
 ├── tools/              # Helper scripts, IDA/Ghidra plugins, YARA rules
 ├── screenshots/        # Debugger and disassembler captures
-└── sandbox/            # VM configs — FlareVM, REMnux
 ```
 
 ---
