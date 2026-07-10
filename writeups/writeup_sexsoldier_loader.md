@@ -5,7 +5,7 @@
 
 **Analyst:** dd1d3  
 
-**Source:** Google Drive link — `Loader .rar` (password: `123123`)  
+**Source:** Google Drive link `Loader .rar` (password: `123123`)  
 
 **AV Detection:** `Trojan:Win32/Ravartar!rfn` (Windows Defender)  
 
@@ -31,7 +31,7 @@ A RAR archive distributed via Google Drive with password `123123` a common techn
 ## Infection Chain
 
 ```
-Loader .rar  (password: 123123 — bypasses browser AV)
+Loader .rar  (password: 123123 bypasses browser AV)
         │
         └── Loader by Sexsoldier.exe  (C#, .NET Framework — stage 1 dropper)
                 │
