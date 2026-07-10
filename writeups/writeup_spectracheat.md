@@ -13,7 +13,7 @@
 
 ## Summary
 
-SpectraCheat.exe is distributed as a fake game cheat through a file-sharing page on. The archive (SpectraCheat.zip, ~186 MB) contains the main executable alongside a set of legitimate-looking DLLs used as cover. The executable embeds a Bun JavaScript runtime and obfuscated JS payload that communicates with a freshly registered C2 domain, silent-orbit.cc.
+SpectraCheat.exe is distributed as a  game cheat through a file-sharing page on. The archive (SpectraCheat.zip, ~186 MB) contains the main executable alongside a set of legitimate-looking DLLs used as cover. The executable embeds a Bun JavaScript runtime and obfuscated JS payload that communicates with a freshly registered C2 domain, silent-orbit.cc.
 
 ---
 
