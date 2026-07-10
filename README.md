@@ -7,7 +7,7 @@
 ![RE](https://img.shields.io/badge/reverse--engineering-yes-darkred?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)
 
-*A public research lab focused on malware dissection, binary reversing.*
+A public research lab focused on malware dissection, binary reversing
 
 </div>
 
