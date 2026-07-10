@@ -1,5 +1,5 @@
 ![alt text](../screenshots/banner.png)
-# Analysis — 489.exe (RAT - Remote Access Trojan)
+# Analysis — 489.exe (Remote Access Trojan)
 
 **Date:** 2026-03-28  
 
@@ -19,7 +19,7 @@ This analysis was conducted in an isolated VM environment for educational purpos
 
 ## Overview
 
-`489.exe` is a Python based RAT compiled with **Nuitka** — a Python-to-C/C++ transpiler. The author chose Nuitka over PyInstaller for a reason: Nuitka compiles Python down to native C code, producing a faster and harder-to-reverse binary compared to a standard PyInstaller bundle. The resulting executable looks like a native C/C++ binary to most tools, which makes initial triage misleading.
+`489.exe` is a Python based RAT compiled with **Nuitka** a Python-to-C/C++ transpiler. The author chose Nuitka over PyInstaller for a reason: Nuitka compiles Python down to native C code, producing a faster and harder-to-reverse binary compared to a standard PyInstaller bundle. The resulting executable looks like a native C/C++ binary to most tools, which makes initial triage misleading.
 
 The malware uses **Telegram's Bot API as its C2 channel**, communicates over `api.telegram.org:443`, and drops a persistent copy of itself under a disguised name in AppData.
 
