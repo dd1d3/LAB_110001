@@ -21,11 +21,9 @@ LAB_110001 is where I document my work breaking down malware how it's built, how
 
 ## What's in here
 
-- Reverse engineering of real malware samples static and dynamic
-- Annotated disassembly with IDA / Ghidra
+- Reverse engineering of malware samples static and dynamic
 - Behavioral analysis: registry, filesystem, network activity
 - Breakdowns of malware families: ransomware, RATs, stealers, loaders
-- YARA rules written from each analysis
 - Notes on packers, obfuscation, and anti-debug techniques
 
 ---
@@ -45,7 +43,7 @@ LAB_110001/
 │   └── dynamic/        # Runtime behavior, network traffic, process activity
 │
 ├── writeups/           # Full walkthroughs readable format, one file per sample
-├── tools/              # Helper scripts, IDA/Ghidra plugins, YARA rules
+├── tools/              # Helper scripts, IDA/Ghidra plugins
 ├── screenshots/        # Debugger and disassembler captures
 ```
 
