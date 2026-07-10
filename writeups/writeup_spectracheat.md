@@ -1,5 +1,5 @@
 ![alt text](../screenshots/banner.png)
-# SpectraCheat.exe — TROJAN
+# SpectraCheat.exe (TROJAN)
 
 **Date:** 2026-05-08
 
@@ -49,7 +49,7 @@ Detect It Easy identified the following:
 - Compiler: Rust
 - Linker: Microsoft Linker 14.0
 - Language (heuristic): JavaScript
-- Protection (heuristic): Generic — Strange sections
+- Protection (heuristic): Generic Strange sections
 - Packer (heuristic): Compressed or packed data, section names repeating
 - Time date stamp: 2026-04-19 00:30:07
 - File size: 111.84 MiB
