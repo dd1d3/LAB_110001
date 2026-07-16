@@ -509,3 +509,11 @@ rule Windows_Trojan_SalatStealer_03d2a4ee {
         all of them
 }
 ```
+
+Update: correcting a mistake
+
+Came across another researcher’s writeup who dug into this a bit deeper, and realized I got one thing wrong.
+
+I thought the address Ef_lZ1T4NCb2mwkme9h2rJfESCE0W34ma9lWp7-_uY3zXDvq was the attacker’s wallet (like the actual C2 address of the bad actor). Turns out it’s actually the official root DNS resolver contract for the TON network it doesn’t belong to the attackers at all, and isn’t tied to any specific person. It’s basically just a shared “directory” that resolves any .ton domain on the network.
+
+The real C2 addresses aren’t in this address, they’re hidden in the .ton domains that get resolved through it (like webratxaye1.ton, webratpanel.ton, etc.) those actually belong to specific operators, and you can look them up through a TON explorer like tonviewer.com.
