@@ -1,5 +1,5 @@
 ![alt text](../screenshots/banner.png)
-# Analysis — Loader by Sexsoldier (RAT/Stealer)
+# Analysis — Loader (WEBRAT)
 
 **Date:** 2026-04-10  
 
@@ -510,7 +510,7 @@ rule Windows_Trojan_SalatStealer_03d2a4ee {
 }
 ```
 
-Update: correcting a mistake
+Update: correcting a mistake (15.07.2026)
 
 Came across another researcher’s writeup who dug into this a bit deeper, and realized I got one thing wrong.
 
